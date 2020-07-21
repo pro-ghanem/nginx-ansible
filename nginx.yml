@@ -9,16 +9,16 @@
           name: nginx
           state: started
       become: yes
-    - name: copy the nginx config file and restart nginx
-      copy:
-        src: nginx.cfg
-        dest: /etc/nginx/nginx.cfg
-      become: yes
-    - name: copy default configuration file
-      copy:
-        src: default
-        dest: /etc/nginx/default
-      become: yes
+#    - name: copy the nginx config file and restart nginx
+#      copy:
+#        src: nginx.cfg
+#        dest: /etc/nginx/nginx.cfg
+#      become: yes
+#    - name: copy default configuration file
+#      copy:
+#        src: default
+#        dest: /etc/nginx/default
+#      become: yes
     - name: copy the static web site
       copy:
         src: html/
