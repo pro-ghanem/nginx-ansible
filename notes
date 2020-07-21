@@ -1,15 +1,9 @@
 
 host1 ansible_host=192.168.2.61 ansible_user=ec2-user
-  <br>
-
 host2 ansible_host=192.168.2.62 ansible_user=ec2-user
-  <br>
 >>> nginx:
-  <br>
 - /usr/share/nginx/html/  >> document root 
-  <br>
 - /etc/nginx/nginx.conf   >> nginx configration file
-  <br>
 - /etc/nginx/sites-available/default   >> allow u To Set Up Nginx Server Blocks for example
-  <br>
+
     if u need change to https instade of http ,index name and root dir
