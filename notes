@@ -6,7 +6,7 @@ host2 ansible_host=192.168.2.62 ansible_user=ec2-user
   <br>
 >>> nginx:
   <br>
-- /var/www/html/  >> document root 
+- /usr/share/nginx/html/  >> document root 
   <br>
 - /etc/nginx/nginx.conf   >> nginx configration file
   <br>
