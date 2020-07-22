@@ -19,6 +19,7 @@
 #        src: default
 #        dest: /etc/nginx/default
 #      become: yes
+
     - name: copy the static web site
       copy:
         src: html/
@@ -29,3 +30,14 @@
         name: nginx
         state: restarted
       become: yes
+    # check only the page if working or not
+    - name: Check that you can connect (GET) to a page and it returns a status 200
+      uri:
+        url: http://www.example.com
+   # more smart check the page if working or not and the page content also   
+    - name: Check that a page returns a status 200 and fail if the word ghanem is not in the page contents
+      uri:
+        url: http://54.162.215.188  # type here your loadbalancer dns or "http://www.example.com" or "ip-address of the machine"
+        return_content: yes
+      register: this
+      failed_when: "'ghanem' not in this.content"
